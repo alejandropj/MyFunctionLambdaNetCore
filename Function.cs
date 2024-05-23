@@ -43,7 +43,9 @@ public class Function
     public string FunctionHandler(TestModels input, ILambdaContext context)
     {
         string mensaje = "";
-        string connectionString = @"Data Source=sqlpaco2825.database.windows.net;Initial Catalog=AZURETAJAMAR;User ID=adminsql;Encrypt=True;Password=Admin123";
+
+        //string connectionString = @"Data Source=sqlpaco2825.database.windows.net;Initial Catalog=AZURETAJAMAR;User ID=adminsql;Encrypt=True;Password=Admin123";
+        string connectionString = Environment.GetEnvironmentVariable("MySQL");
 
         try
         {
